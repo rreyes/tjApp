@@ -132,6 +132,55 @@ angular.module('your_app_name.app.controllers', [])
 	};
 })
 
+
+  .controller('DirectorioCtrl', function($scope, PostService, $ionicPopup, $state) {
+    //$scope.posts = [];
+    //$scope.page = 1;
+    //$scope.totalPages = 1;
+
+    $scope.doRefresh = function() {
+      PostService.getFeed(1)
+        .then(function(data){
+          $scope.contacts = [
+            {
+              "name": "Hello"
+            },
+            {
+              "name": "Bobby"
+            }
+          ];
+
+          $scope.$broadcast('scroll.refreshComplete');
+        });
+    };
+
+    //$scope.getNewData = function() {
+    //  //do something to load your new data here
+    //  $scope.$broadcast('scroll.refreshComplete');
+    //};
+
+    //$scope.loadMoreData = function(){
+    //  $scope.page += 1;
+    //
+    //  PostService.getFeed($scope.page)
+    //    .then(function(data){
+    //      //We will update this value in every request because new posts can be created
+    //      $scope.totalPages = data.totalPages;
+    //      $scope.posts = $scope.posts.concat(data.posts);
+    //
+    //      $scope.$broadcast('scroll.infiniteScrollComplete');
+    //    });
+    //};
+
+    $scope.moreDataCanBeLoaded = function(){
+      return $scope.totalPages > $scope.page;
+    };
+
+    $scope.doRefresh();
+
+  })
+
+
 .controller('FeedCtrl', function($scope, PostService, $ionicPopup, $state) {
   $scope.posts = [];
   $scope.page = 1;

@@ -104,6 +104,26 @@ angular.module('your_app_name', [
     }
   })
 
+    .state('app.directorio', {
+      //abstract: true,
+      url: '/directorio/',
+      views: {
+        'menuContent': {
+          templateUrl: "views/app/directorio/directorio.html",
+          controller: 'DirectorioCtrl'
+        }
+      }
+    })
+
+    //.state('app.directorio.contacts', {
+    //  url: '/contacts',
+    //  views: {
+    //    'profileContent': {
+    //      templateUrl: 'views/app/directorio/directorio.contacts.html'
+    //    }
+    //  }
+    //})
+
   .state('app.profile.likes', {
     url: '/likes',
     views: {

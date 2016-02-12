@@ -1,0 +1,9 @@
+<ion-view ng-class="{'own-profile': myProfile}" class="profile-view" cache-view="false" view-title="Directorio">
+  <ion-content has-bouncing='false' class="profile-content" delegate-handle="profile-scroll">
+    <div ng-repeat="contact in contacts">
+      <div class="col">
+        <section ng-include="'views/app/partials/contact.html'" class="post-card-outer"></section>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>
