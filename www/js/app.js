@@ -115,6 +115,26 @@ angular.module('your_app_name', [
       }
     })
 
+    .state('app.security', {
+      url: '/security/',
+      views: {
+        'menuContent': {
+          templateUrl: "views/app/security.html",
+          controller: 'DirectorioCtrl'
+        }
+      }
+    })
+
+    .state('app.eventos', {
+      url: '/eventos/',
+      views: {
+        'menuContent': {
+          templateUrl: "views/app/eventos.html",
+          controller: 'DirectorioCtrl'
+        }
+      }
+    })
+
     //.state('app.directorio.contacts', {
     //  url: '/contacts',
     //  views: {

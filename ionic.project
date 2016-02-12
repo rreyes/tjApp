@@ -1,6 +1,6 @@
 {
-  "name": "ionTheme-2",
-  "app_id": "",
+  "name": "tjApp",
+  "app_id": "c2140e8e",
   "gulpStartupTasks": [
     "default",
     "watch",

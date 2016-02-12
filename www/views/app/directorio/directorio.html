@@ -1,9 +1,26 @@
 <ion-view ng-class="{'own-profile': myProfile}" class="profile-view" cache-view="false" view-title="Directorio">
   <ion-content has-bouncing='false' class="profile-content" delegate-handle="profile-scroll">
-    <div ng-repeat="contact in contacts">
-      <div class="col">
-        <section ng-include="'views/app/partials/contact.html'" class="post-card-outer"></section>
-      </div>
-    </div>
+    <ion-list>
+    <ion-item ng-repeat="contact in contacts">
+        <div class="row">
+          <div class="col">
+            <p>{{contact.type}}</p>
+          </div>
+          <div class="col">
+            <p>{{contact.name}}</p>
+          </div>
+          <div class="col">
+            <p>{{contact.role}}</p>
+          </div>
+          <div class="col">
+            <p>{{contact.phone}}</p>
+          </div>
+          <div class="col">
+            <p>{{contact.email}}</p>
+          </div>
+        </div>
+
+    </ion-item>
+    </ion-list>
   </ion-content>
 </ion-view>

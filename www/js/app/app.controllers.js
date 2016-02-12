@@ -143,10 +143,18 @@ angular.module('your_app_name.app.controllers', [])
         .then(function(data){
           $scope.contacts = [
             {
-              "name": "Hello"
+              "type": "Presidencia",
+              "name": "Dr. Jorge",
+              "role": "Presidente",
+              "phone": "999-999-1111",
+              "email": "sdf@sdf.com"
             },
             {
-              "name": "Bobby"
+              "type": "Presidencia",
+              "name": "Dr. Jorge",
+              "role": "Presidente",
+              "phone": "999-999-1111",
+              "email": "sdf@sdf.com"
             }
           ];
 
